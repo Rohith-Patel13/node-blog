@@ -1,0 +1,97 @@
+### Get all users API 1
+GET http://localhost:8383/users
+
+### Create a new user API 2
+POST http://localhost:8383/users
+Content-Type: application/json
+
+{
+  "username": "Deekshith",
+  "email": "deekshith@example.com", 
+  "password": "deekshith@#1234"  
+}
+
+### Get a user by ID API 3
+GET http://localhost:8383/users/10
+
+### Update a user by ID API 4
+PUT http://localhost:8383/users/10
+Content-Type: application/json
+
+{
+  "username": "Appala Ravinder",
+  "email": "ravinderappala@example.com"
+}
+
+### Delete a user by ID API 5
+DELETE http://localhost:8383/users/8
+
+
+# Blogs
+
+### Get all blogs API 6
+GET http://localhost:8383/blogs
+
+### Create a new blog API 7
+POST http://localhost:8383/blogs
+Content-Type: application/json
+
+{
+  "title": "Traveling Tips",
+  "content": "Planning your next adventure? Here are some essential traveling tips to make your journey memorable.",
+  "userId": 1
+}
+
+### Get a blog by ID API 8 
+GET http://localhost:8383/blogs/5
+
+### Update a blog by ID API 9 
+PUT http://localhost:8383/blogs/5
+Content-Type: application/json
+
+{
+  "title": "Adventure Traveling Tips",
+  "content": "Make your travel unforgettable with these expert tips."
+}
+
+### Delete a blog by ID API 10
+DELETE http://localhost:8383/blogs/6
+
+
+# Comments
+
+### Get all comments API 11
+GET http://localhost:8383/comments
+
+### Create a new comment API 12
+POST http://localhost:8383/comments
+Content-Type: application/json
+
+{
+  "content": "Great tips for travelers!",
+  "userId": 1,
+  "blogId": 1
+}
+
+### Get a comment by ID API 13
+GET http://localhost:8383/comments/1
+
+### Update a comment by ID API 14
+PUT http://localhost:8383/comments/1
+Content-Type: application/json
+
+{
+  "content": "These tips are really helpful for my upcoming trip."
+}
+
+### Delete a comment by ID API 15
+DELETE http://localhost:8383/comments/1
+
+
+# Friend Levels
+
+### Get 1st level friends of a user API 16
+GET http://localhost:8383/users/5/level/1
+
+### Get 2nd level friends of a user API 17
+GET http://localhost:8383/users/6/level/2

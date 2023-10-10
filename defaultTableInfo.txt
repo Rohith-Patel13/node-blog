@@ -1,0 +1,49 @@
+Below are the table information without CRUD operations
+
+sqlite> .tables
+Comments  blogs     users
+
+
+sqlite> PRAGMA table_info(users);                   
+0|userId|INTEGER|0||1
+1|username|TEXT|1||0
+2|email|TEXT|0||0
+3|password|TEXT|0||0
+
+sqlite> SELECT * FROM users;
+4|Rohith|rohith@example.com
+5|Patel|patel@example.com
+6|Appala|appala@example.com
+
+
+sqlite> PRAGMA table_info(blogs); 
+0|blogId|INTEGER|0||1
+1|title|TEXT|1||0
+2|content|TEXT|0||0
+3|userId|INTEGER|1||0
+
+sqlite> SELECT * FROM blogs;      
+4|Traveling Tips|Planning your next adventure? Here are some essential traveling tips to make your journey memorable.|4
+5|Cooking Adventures|Join me on a culinary journey as we explore different cuisines and cooking techniques.|5
+6|Fitness and Health|Discover the latest fitness trends and health tips to lead a healthier lifestyle.|6
+
+
+sqlite> PRAGMA table_info(Comments); 
+0|commentId|INTEGER|0||1
+1|content|TEXT|1||0
+2|userId|INTEGER|1||0
+3|blogId|INTEGER|1||0
+
+sqlite> SELECT * FROM Comments;      
+1|Great tips for travelers!|4|4
+2|I love trying out new recipes.|5|5
+3|I need to start exercising more.|6|6
+sqlite>
+
+sqlite> INSERT INTO friends (user1Id, user2Id) VALUES (4, 5),(5, 6), (7, 9),(10, 11);                                       
+sqlite> SELECT * FROM friends;
+1|4|5
+2|5|6
+3|7|9
+4|10|11
+sqlite>
